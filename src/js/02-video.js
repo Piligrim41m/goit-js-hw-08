@@ -8,5 +8,19 @@ player.on('timeupdate', throttle(onPlay, 1000));
 function onPlay({ seconds }) {
   localStorage.setItem('videoplayer-current-time', seconds);
 }
+console.log(localStorage.getItem('videoplayer-current-time'))
+// player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+player.setCurrentTime(currentTime());
 
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+
+
+function currentTime() {
+  let time = 0
+ if (localStorage.getItem('videoplayer-current-time')) {
+     time = localStorage.getItem('videoplayer-current-time')
+  } 
+  console.log(time)
+  return time
+  
+ }
+
