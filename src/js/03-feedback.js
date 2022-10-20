@@ -9,8 +9,8 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormInput(event) {
   const formData = {}
-  formData.email = event.elements.email.value || ""
-  formData.message = event.elements.message.value || ""
+  formData.email = event.currentTarget.elements.email.value || ""
+  formData.message = event.currentTarget.elements.message.value || ""
   // formData[event.target.name] = event.target.value
   localStorage.setItem("feedback-form-state", JSON.stringify(formData))
   console.log(localStorage.getItem("feedback-form-state"))
