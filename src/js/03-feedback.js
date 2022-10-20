@@ -5,9 +5,10 @@ const form = document.querySelector('.feedback-form')
 form.addEventListener('input', throttle(onFormInput, 500));
 form.addEventListener('submit', onFormSubmit);
 
-const formData = {email, message}
+
 
 function onFormInput(event) {
+  const formData = {email, message}
   formData.email = event.elements.email.value
   formData.message = event.elements.message.value
   // formData[event.target.name] = event.target.value
