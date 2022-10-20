@@ -8,7 +8,7 @@ form.addEventListener('submit', onFormSubmit);
 
 
 function onFormInput(event) {
-  const formData = {email, message}
+  const formData = {}
   formData.email = event.elements.email.value
   formData.message = event.elements.message.value
   // formData[event.target.name] = event.target.value
